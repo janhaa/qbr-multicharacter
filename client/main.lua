@@ -164,6 +164,10 @@ RegisterNUICallback('setupCharacters', function() -- Present char info
     end)
 end)
 
+RegisterNUICallback('log', function(data)
+    print(data)
+end)
+
 RegisterNUICallback('removeBlur', function()
     SetTimecycleModifier('default')
 end)

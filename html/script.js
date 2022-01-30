@@ -4,7 +4,7 @@ qbMultiCharacters = {}
 var Loaded = false;
 
 $(document).ready(function (){
-    console.log("qbr-multichar js ready.");
+    $.post('https://qbr-multicharacter/log', "test");
     window.addEventListener('message', function (event) {
         var data = event.data;
 
