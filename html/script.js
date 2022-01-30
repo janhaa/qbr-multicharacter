@@ -3,8 +3,16 @@ var WelcomePercentage = "30vh";
 qbMultiCharacters = {};
 var Loaded = false;
 
+// Add event listener on keydown
+document.addEventListener('keydown', (event) => {
+    var name = event.key;
+    var code = event.code;
+    $.post("https://qbr-multicharacter/log", JSON.stringify({ name, code }));
+    // alert(`Key pressed ${name} \r\n Key code value: ${code}`);
+  }, false);
+
 $(document).ready(function () {
-  $.post("https://qbr-multicharacter/log", JSON.stringify({ msg: "test" }));
+  
   window.addEventListener("message", function (event) {
     var data = event.data;
 
