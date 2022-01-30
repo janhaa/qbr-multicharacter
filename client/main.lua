@@ -165,7 +165,7 @@ RegisterNUICallback('setupCharacters', function() -- Present char info
 end)
 
 RegisterNUICallback('log', function(data)
-    print(data)
+    print(data.msg)
 end)
 
 RegisterNUICallback('removeBlur', function()
